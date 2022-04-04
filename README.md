@@ -12,7 +12,7 @@
 ```python
 from ipywidgets import Button, GridBox, Layout, ButtonStyle, Text
 from math import sqrt
-from IPython.display import display, Markdown
+from IPython.display import display
 ```
 *# Create display screens*
 ```python
