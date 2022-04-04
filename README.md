@@ -10,8 +10,8 @@
 
 *# Import ipywidgets for GUI and math to use sqrt function*
 
-'''python
+```ruby
 from ipywidgets import Button, GridBox, Layout, ButtonStyle, Text
 from math import sqrt
 from IPython.display import display, Markdown
-'''
+```
