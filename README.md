@@ -62,13 +62,13 @@ button0  = Button(description='0',
 button_cla  = Button(description='AC',
                  layout=Layout(width='70px', height='50px', grid_area='cla'),
                  style=ButtonStyle(button_color='gray', font_weight = 'bold'))
-button_pw  = Button(description='x^2',
+button_pw  = Button(description='\u0078\u00b2',
                  layout=Layout(width='70px', height='50px', grid_area='pw'),
                  style=ButtonStyle(button_color='gray', font_weight = 'bold'))
-button_sqrt  = Button(description='Sqrt',
+button_sqrt  = Button(description='\u221A',
                  layout=Layout(width='70px', height='50px', grid_area='sqrt'),
                  style=ButtonStyle(button_color='gray', font_weight = 'bold'))
-button_div  = Button(description='/',
+button_div  = Button(description='\u00f7',
                  layout=Layout(width='70px', height='50px', grid_area='div'),
                  style=ButtonStyle(button_color='DarkOrange', font_weight = 'bold'))
 button_multi  = Button(description='x',
@@ -286,7 +286,7 @@ def on_clicked_pw(b):
     global result_flag
     dot_flag = False
     first_num = float(main_screen.value)
-    sub_screen.value = main_screen.value + " * " + main_screen.value
+    sub_screen.value = main_screen.value + "\u00b2"
     main_screen.value = str(first_num ** 2)
     first_num = 0
     oper = ""
@@ -304,7 +304,7 @@ def on_clicked_sqrt(b):
     global result_flag
     dot_flag = False
     first_num = float(main_screen.value)
-    sub_screen.value = "sqrt" + '(' + main_screen.value + ')'
+    sub_screen.value = "\u221A" + main_screen.value
     main_screen.value = str(sqrt(first_num))
     first_num = 0
     oper = ""
@@ -346,20 +346,22 @@ def on_clicked_div(b):
     global first_num
     global dot_flag
     global oper
+    global result_flag
+    result_flag = False
     dot_flag = False
     if oper == "":
         if main_screen.value == "":
             first_num = 0   
-            sub_screen.value = "0 / "
+            sub_screen.value = "0 \u00f7 "
         else:
             first_num = float(main_screen.value)
-            sub_screen.value = main_screen.value + " / "
+            sub_screen.value = main_screen.value + " \u00f7 "
             main_screen.value = ""
     else:
         if first_num == 0:
-            sub_screen.value = "0 / "
+            sub_screen.value = "0 \u00f7 "
         else:
-            sub_screen.value = sub_screen.value[:len(sub_screen.value)-3] + " / "        
+            sub_screen.value = sub_screen.value[:len(sub_screen.value)-3] + " \u00f7 "        
     oper = "div"    
         
 button_div.on_click(on_clicked_div)
@@ -371,6 +373,8 @@ def on_clicked_multi(b):
     global first_num
     global dot_flag
     global oper
+    global result_flag
+    result_flag = False
     dot_flag = False
     if oper == "":
         if main_screen.value == "":
@@ -396,6 +400,8 @@ def on_clicked_minus(b):
     global first_num
     global dot_flag
     global oper
+    global result_flag
+    result_flag = False
     dot_flag = False
     if oper == "":
         if main_screen.value == "":
@@ -421,6 +427,8 @@ def on_clicked_plus(b):
     global first_num
     global dot_flag
     global oper
+    global result_flag
+    result_flag = False
     dot_flag = False
     if oper == "":
         if main_screen.value == "":
