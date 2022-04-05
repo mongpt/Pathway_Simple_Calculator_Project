@@ -8,6 +8,9 @@
 ## Calculator
 **Build a program that can be used as a basic calculator. Your program should have a manu displayed for the user to choose from, where are listed basic operations: addition, subtraction, multiplication, division, second power, square root, exit. The program should allow user to choose the desired operation over and over again until user chooses to quit using it**
 
+<img src="calculator.PNG">
+
+
 *# Import ipywidgets for GUI and math to use sqrt function*
 ```python
 from ipywidgets import Button, GridBox, Layout, ButtonStyle, Text
