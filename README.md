@@ -261,11 +261,15 @@ def on_clicked_cla(b):
     global dot_flag
     global first_num
     global second_num
+    global oper
+    global result_flag
     main_screen.value = ""
     sub_screen.value = ""
     first_num = 0
     second_num = 0
+    oper = ""
     dot_flag = False
+    result_flag = False
         
 button_cla.on_click(on_clicked_cla)
 ```
